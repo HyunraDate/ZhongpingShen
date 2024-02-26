@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta hettp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 不可以在css中设置canvas大小！ */
+        /* If set here, css会强行拉伸画布 */
+        canvas {
+            border: 1px solid #eed4ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <canvas id="canvas"></canvas>
+    <p>年初五！接财神！</p>
+
+    <script>
+        let canvas = document.getElementById('canvas')
+        //console.log(canvas)
+        let ctx = canvas.getContext('2d') //WebGL是挂在canvas上面的！
+        //详见mdm canvas api
+
+        canvas.width = 400
+        canvas.height = 400
+        //* if u wanna fullview screen
+        //canvas.width = window.innerWidth
+        
+
+        //ctx.fillRect(0, 0, 100, 100) //坐标&边长 x, y, w, h. this is normal 2D API
+
+        let x = 0
+        let y = 0
+        let d = 20
+        function draw(){
+            ctx.fillRect(x, y, d, d)
+        }
+
+        for(let i = 0; i < 10; i++){
+            //this a concept of making animation!
+            draw()
+            x +=30
+            y +=30
+        }
+    </script>
+</body>
+</html>

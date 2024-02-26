@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta hettp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #eed4ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <canvas id="canvas"></canvas>
+    <p>年初五！接财神！</p>
+
+    <script>
+        let canvas = document.getElementById('canvas')
+        //console.log(canvas)
+        let ctx = canvas.getContext('2d') //WebGL是挂在canvas上面的！
+        //详见mdm canvas api
+
+        canvas.width = 400
+        canvas.height = 400
+        //* if u wanna fullview screen
+        //canvas.width = window.innerWidth
+
+        ctx.fillRect(0, 0, 100, 100) //坐标&边长 x, y, w, h. this is normal 2D API
+    </script>
+</body>
+</html>
